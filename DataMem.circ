@@ -95,7 +95,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="100" y="62">WE</text>
       <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="107" y="73">RD</text>
       <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="62" y="103">WD</text>
-      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="61" y="73">A</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="63" y="73">AD</text>
       <circ-port height="8" pin="160,200" width="8" x="46" y="66"/>
       <circ-port height="8" pin="160,260" width="8" x="66" y="46"/>
       <circ-port height="8" pin="160,290" width="8" x="96" y="46"/>
