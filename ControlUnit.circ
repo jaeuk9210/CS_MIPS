@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+      <a name="radix" val="10signed"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="width" val="32"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <lib desc="file#Main_Decoder.circ" name="7"/>
+  <lib desc="file#ALU_Decoder.circ" name="8"/>
+  <main name="ControlUnit"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="ControlUnit">
+    <a name="circuit" val="ControlUnit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="none" height="140" stroke="#000000" stroke-width="2" width="70" x="50" y="10"/>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="70" y="72">Control</text>
+      <text font-family="SansSerif" font-size="9" text-anchor="middle" x="69" y="82">Unit</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="68" y="32">Jump</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="92" y="23">MemtoReg</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="93" y="42">MemWrite</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="99" y="62">Branch</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="98" y="143">ALUCtrl</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="98" y="82">ALUSrc</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="98" y="102">RegDst</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="95" y="123">RegWrite</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="72" y="113">Opcode</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="middle" x="68" y="133">Funct</text>
+      <circ-port height="10" pin="190,120" width="10" x="45" y="25"/>
+      <circ-port height="8" pin="190,180" width="8" x="46" y="106"/>
+      <circ-port height="8" pin="190,320" width="8" x="46" y="126"/>
+      <circ-port height="10" pin="330,130" width="10" x="115" y="15"/>
+      <circ-port height="10" pin="330,150" width="10" x="115" y="35"/>
+      <circ-port height="10" pin="330,170" width="10" x="115" y="55"/>
+      <circ-port height="10" pin="330,190" width="10" x="115" y="75"/>
+      <circ-port height="10" pin="330,210" width="10" x="115" y="95"/>
+      <circ-port height="10" pin="330,230" width="10" x="115" y="115"/>
+      <circ-port height="10" pin="330,320" width="10" x="115" y="135"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="17"/>
+    </appear>
+    <wire from="(190,180)" to="(230,180)"/>
+    <wire from="(260,250)" to="(260,280)"/>
+    <wire from="(190,120)" to="(230,120)"/>
+    <wire from="(190,320)" to="(230,320)"/>
+    <wire from="(290,130)" to="(330,130)"/>
+    <wire from="(290,150)" to="(330,150)"/>
+    <wire from="(290,170)" to="(330,170)"/>
+    <wire from="(290,190)" to="(330,190)"/>
+    <wire from="(290,210)" to="(330,210)"/>
+    <wire from="(290,230)" to="(330,230)"/>
+    <wire from="(290,320)" to="(330,320)"/>
+    <comp lib="0" loc="(330,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(330,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(330,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(330,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="7" loc="(290,130)" name="Main_Decoder"/>
+    <comp lib="8" loc="(290,320)" name="ALU_Decoder"/>
+    <comp lib="0" loc="(190,120)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(330,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(330,320)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(190,180)" name="Pin">
+      <a name="width" val="6"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(330,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(190,320)" name="Pin">
+      <a name="width" val="6"/>
+      <a name="tristate" val="false"/>
+    </comp>
+  </circuit>
+</project>
