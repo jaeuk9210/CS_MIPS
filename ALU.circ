@@ -108,6 +108,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(150,470)" to="(200,470)"/>
     <wire from="(520,450)" to="(560,450)"/>
     <wire from="(620,220)" to="(620,630)"/>
+    <wire from="(680,240)" to="(680,270)"/>
     <wire from="(340,90)" to="(340,170)"/>
     <wire from="(600,170)" to="(710,170)"/>
     <wire from="(600,210)" to="(710,210)"/>
@@ -124,6 +125,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(460,630)" to="(620,630)"/>
     <wire from="(320,290)" to="(340,290)"/>
     <wire from="(270,280)" to="(290,280)"/>
+    <wire from="(680,240)" to="(710,240)"/>
     <wire from="(340,290)" to="(360,290)"/>
     <wire from="(360,180)" to="(360,220)"/>
     <wire from="(790,110)" to="(820,110)"/>
@@ -170,16 +172,31 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(470,540)" to="(600,540)"/>
     <wire from="(560,70)" to="(560,120)"/>
     <wire from="(270,540)" to="(400,540)"/>
-    <comp lib="0" loc="(150,470)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ALU_Control"/>
-    </comp>
     <comp lib="0" loc="(580,440)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="3"/>
       <a name="bit0" val="1"/>
       <a name="bit2" val="0"/>
+    </comp>
+    <comp lib="1" loc="(260,300)" name="NOT Gate">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(530,350)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+      <a name="out_width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(190,180)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="SrcA"/>
+    </comp>
+    <comp lib="1" loc="(440,70)" name="AND Gate">
+      <a name="width" val="32"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="2" loc="(750,210)" name="Multiplexer">
+      <a name="select" val="3"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(200,470)" name="Splitter">
       <a name="fanout" val="3"/>
@@ -189,18 +206,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit2" val="1"/>
       <a name="bit3" val="0"/>
     </comp>
-    <comp lib="1" loc="(260,300)" name="NOT Gate">
+    <comp lib="0" loc="(680,270)" name="Constant">
+      <a name="facing" val="north"/>
       <a name="width" val="32"/>
+      <a name="value" val="0x0"/>
     </comp>
-    <comp lib="2" loc="(750,210)" name="Multiplexer">
-      <a name="select" val="3"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(860,120)" name="Comparator">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(430,230)" name="Adder">
-      <a name="width" val="32"/>
+    <comp lib="0" loc="(900,120)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Zero"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="2" loc="(320,290)" name="Multiplexer">
       <a name="width" val="32"/>
@@ -247,6 +262,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="SrcB"/>
     </comp>
+    <comp lib="7" loc="(470,540)" name="PopCounter32"/>
+    <comp lib="0" loc="(150,470)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ALU_Control"/>
+    </comp>
+    <comp lib="8" loc="(460,630)" name="Average"/>
+    <comp lib="0" loc="(790,110)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(870,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -254,32 +280,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ALU_Result"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(460,630)" name="Average"/>
-    <comp lib="7" loc="(470,540)" name="PopCounter32"/>
-    <comp lib="0" loc="(790,110)" name="Constant">
+    <comp lib="3" loc="(860,120)" name="Comparator">
       <a name="width" val="32"/>
-      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="3" loc="(430,230)" name="Adder">
+      <a name="width" val="32"/>
     </comp>
     <comp lib="1" loc="(440,150)" name="OR Gate">
-      <a name="width" val="32"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(190,180)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SrcA"/>
-    </comp>
-    <comp lib="0" loc="(530,350)" name="Bit Extender">
-      <a name="in_width" val="1"/>
-      <a name="out_width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(900,120)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Zero"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(440,70)" name="AND Gate">
       <a name="width" val="32"/>
       <a name="inputs" val="2"/>
     </comp>
