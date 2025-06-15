@@ -4,7 +4,7 @@
 
 본 프로젝트는 MIPS 명령어 집합 구조(ISA)를 기반으로 한 32비트 MIPS Processor 입니다. 
 
-## 🔧 과제 2. Added Custom ALU Operations in Single Cycle MIPS Processor(Prob.2 branch)
+## 🔧 과제 2. Added Custom ALU Operations in Single Cycle MIPS Processor (Prob.2 branch)
 
 과제 1에서의 기존 명령어 이외에 사용자 정의 명령어를 새롭게 설계하여 추가한 Single Cycle MIPS Processor 입니다.
 <br/>아래 명령어들을 지원합니다.
