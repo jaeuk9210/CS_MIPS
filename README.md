@@ -4,9 +4,10 @@
 
 본 프로젝트는 MIPS 명령어 집합 구조(ISA)를 기반으로 한 32비트 MIPS Processor 입니다. 
 
-## 🔧 과제 1. Design Single Cycle MIPS Processor(main branch)
+## 🔧 과제 2. Single Cycle MIPS Processor with Added Custom ALU Operations(Prob.2 branch)
 
-아래 명령어들을 지원하는 Single Cycle MIPS Processor 입니다.
+과제 1에서의 기존 명령어 이외에 사용자 정의 명령어를 새롭게 설계하여 추가한 Single Cycle MIPS Processor 입니다.
+<br/>아래 명령어들을 지원합니다.
 
 ### 산술 연산 명령어
 
@@ -28,3 +29,9 @@
 
 - **beq**: 두 레지스터 값이 같으면 지정된 주소로 분기
 - **j**: 무조건 지정된 주소로 점프
+
+### 사용자 정의 명령어
+
+- **popc**: 레지스터의 값에서 1로 설정된 비트의 개수를 카운트
+- **popci**: 입력한 값에서 1로 설정된 비트의 개수를 카운트
+- **avg**: 두 레지스터 값의 평균값을 계산
