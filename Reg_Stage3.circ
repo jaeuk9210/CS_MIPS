@@ -89,13 +89,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="112">MemWriteM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="152">RegWriteM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="132">BranchM</text>
-      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="272">RegWriteM</text>
+      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="272">PCBranchM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="232">WriteDataM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="252">WriteRegM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="192">ZeroM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="end" x="162" y="212">ALUOutM</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="start" x="58" y="132">BranchE</text>
-      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="start" x="58" y="272">RegWriteE</text>
+      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="start" x="58" y="272">PCBranchE</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="start" x="58" y="112">MemWriteE</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="start" x="58" y="152">RegWriteE</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="start" x="58" y="72">ErrorE</text>
