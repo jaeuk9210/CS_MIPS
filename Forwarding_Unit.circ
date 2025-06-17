@@ -89,7 +89,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="57" y="62">RsE</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="56" y="82">RtE</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="58" y="102">RdM</text>
-      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="58" y="122">RdM</text>
+      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="58" y="122">RdW</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="117" y="72">MUX_A</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="117" y="112">MUX_B</text>
       <circ-port height="8" pin="290,130" width="8" x="66" y="36"/>
