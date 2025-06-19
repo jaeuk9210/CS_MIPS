@@ -79,9 +79,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <appear>
       <rect fill="none" height="40" stroke="#000000" stroke-width="2" width="40" x="50" y="50"/>
       <text font-family="SansSerif" font-size="12" text-anchor="end" x="89" y="88">AVG</text>
-      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="start" x="56" y="63">A</text>
-      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="start" x="55" y="83">B</text>
-      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="end" x="84" y="73">Result</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="start" x="54" y="63">A</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="start" x="54" y="83">B</text>
+      <text fill="#808080" font-family="SansSerif" font-size="8" text-anchor="end" x="85" y="73">Result</text>
       <circ-port height="8" pin="430,150" width="8" x="46" y="56"/>
       <circ-port height="8" pin="430,240" width="8" x="46" y="76"/>
       <circ-port height="10" pin="610,200" width="10" x="85" y="65"/>
@@ -96,29 +96,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(450,180)" to="(470,180)"/>
     <wire from="(450,200)" to="(450,240)"/>
     <wire from="(600,200)" to="(610,200)"/>
+    <comp lib="3" loc="(600,200)" name="Shifter">
+      <a name="width" val="32"/>
+      <a name="shift" val="ar"/>
+    </comp>
     <comp lib="0" loc="(610,200)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,240)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="3" loc="(600,200)" name="Shifter">
-      <a name="width" val="32"/>
-      <a name="shift" val="ar"/>
-    </comp>
-    <comp lib="0" loc="(430,150)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-    </comp>
     <comp lib="0" loc="(540,210)" name="Constant">
       <a name="width" val="5"/>
     </comp>
     <comp lib="3" loc="(510,190)" name="Adder">
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(430,240)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(430,150)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
