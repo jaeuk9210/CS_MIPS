@@ -4,10 +4,12 @@
 
 본 프로젝트는 MIPS 명령어 집합 구조(ISA)를 기반으로 한 32비트 MIPS Processor 입니다. 
 
-## 🔧 과제 2. Added Custom ALU Operations in Single Cycle MIPS Processor (Prob.2 branch)
+## 🔧 과제 3. Pipeline MIPS Processor (Prob.3 branch)
 
-과제 1에서의 기존 명령어 이외에 사용자 정의 명령어를 새롭게 설계하여 추가한 Single Cycle MIPS Processor 입니다.
-<br/>아래 명령어들을 지원합니다.
+과제 2에서 사용자 정의 명령어가 추가된 Single Cycle MIPS를 Pipeline MIPS Processor 입니다.
+<br/>Data hazard, Control hazard 해결을 위해 별도의 Hazard Unit을 설계하습니다.
+<br/>Data hazard는 Forwarding 방식, Control hazard는 Branch stall(Early Branch) 방법을 통해서 해결하였습니다.
+<br/>이 프로세서는 아래 명령어들을 지원합니다.
 
 ### 산술 연산 명령어
 
