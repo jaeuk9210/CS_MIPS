@@ -170,101 +170,81 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(640,480)" to="(710,480)"/>
     <wire from="(530,320)" to="(530,370)"/>
     <wire from="(370,450)" to="(440,450)"/>
-    <comp lib="6" loc="(820,383)" name="Text">
-      <a name="text" val="ForwardB = 01(EX)"/>
-    </comp>
-    <comp lib="6" loc="(826,461)" name="Text">
-      <a name="text" val="ForwardA = 10(MEM)"/>
-    </comp>
-    <comp lib="6" loc="(103,139)" name="Text">
-      <a name="text" val="No Hazard X -&gt; MUX : 00"/>
+    <comp lib="0" loc="(330,310)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="EX|MEM.RegRd"/>
     </comp>
     <comp lib="0" loc="(990,240)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="1" loc="(650,390)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(330,540)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="MEM|WB.RegRd"/>
-    </comp>
-    <comp lib="3" loc="(480,620)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="3" loc="(480,230)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="6" loc="(108,159)" name="Text">
-      <a name="text" val="EX_Hazard -&gt; MUX : 01"/>
-    </comp>
-    <comp lib="6" loc="(826,603)" name="Text">
-      <a name="text" val="ForwardB = 10(MEM)"/>
-    </comp>
-    <comp lib="1" loc="(520,530)" name="NOT Gate"/>
-    <comp lib="3" loc="(480,530)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(330,380)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ID|EX.RegRs"/>
-    </comp>
-    <comp lib="6" loc="(822,223)" name="Text">
-      <a name="text" val="ForwardA = 01 (EX)"/>
-    </comp>
-    <comp lib="0" loc="(330,720)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="pull" val="up"/>
-      <a name="label" val="RegWriteW"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="3" loc="(480,320)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="1" loc="(760,470)" name="AND Gate">
-      <a name="inputs" val="4"/>
-      <a name="negate0" val="true"/>
-    </comp>
     <comp lib="0" loc="(330,160)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="RegWriteM"/>
-      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(330,470)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="ID|EX.RegRt"/>
     </comp>
+    <comp lib="1" loc="(760,470)" name="AND Gate">
+      <a name="inputs" val="4"/>
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="0" loc="(330,720)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="pull" val="up"/>
+      <a name="label" val="RegWriteW"/>
+    </comp>
+    <comp lib="3" loc="(480,320)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="6" loc="(820,383)" name="Text">
+      <a name="text" val="ForwardB = 01(EX)"/>
+    </comp>
+    <comp lib="1" loc="(760,610)" name="AND Gate">
+      <a name="inputs" val="4"/>
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="0" loc="(330,540)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM|WB.RegRd"/>
+    </comp>
+    <comp lib="6" loc="(826,603)" name="Text">
+      <a name="text" val="ForwardB = 10(MEM)"/>
+    </comp>
     <comp lib="0" loc="(990,610)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="appear" val="center"/>
     </comp>
+    <comp lib="3" loc="(480,620)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="1" loc="(650,230)" name="AND Gate">
       <a name="inputs" val="3"/>
     </comp>
-    <comp lib="6" loc="(103,178)" name="Text">
-      <a name="text" val="MEM_Hazard -&gt; MUX : 10"/>
+    <comp lib="3" loc="(480,230)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(520,320)" name="NOT Gate"/>
+    <comp lib="6" loc="(826,461)" name="Text">
+      <a name="text" val="ForwardA = 10(MEM)"/>
+    </comp>
+    <comp lib="0" loc="(330,330)" name="Constant">
+      <a name="width" val="5"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(520,530)" name="NOT Gate"/>
+    <comp lib="6" loc="(822,223)" name="Text">
+      <a name="text" val="ForwardA = 01 (EX)"/>
+    </comp>
+    <comp lib="3" loc="(480,530)" name="Comparator">
+      <a name="width" val="5"/>
     </comp>
     <comp lib="3" loc="(480,390)" name="Comparator">
       <a name="width" val="5"/>
-    </comp>
-    <comp lib="3" loc="(480,460)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(330,310)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="EX|MEM.RegRd"/>
-    </comp>
-    <comp lib="0" loc="(1030,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="2"/>
-      <a name="label" val="MUX_A"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(1030,610)" name="Pin">
       <a name="facing" val="west"/>
@@ -273,14 +253,23 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="MUX_B"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(760,610)" name="AND Gate">
-      <a name="inputs" val="4"/>
-      <a name="negate0" val="true"/>
+    <comp lib="1" loc="(650,390)" name="AND Gate">
+      <a name="inputs" val="3"/>
     </comp>
-    <comp lib="1" loc="(520,320)" name="NOT Gate"/>
-    <comp lib="0" loc="(330,330)" name="Constant">
+    <comp lib="0" loc="(330,380)" name="Pin">
       <a name="width" val="5"/>
-      <a name="value" val="0x0"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ID|EX.RegRs"/>
+    </comp>
+    <comp lib="3" loc="(480,460)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1030,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="label" val="MUX_A"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="Ctrl_Hazard_Forwarding">
@@ -335,14 +324,49 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(380,320)" to="(460,320)"/>
     <wire from="(380,460)" to="(460,460)"/>
     <wire from="(320,330)" to="(320,450)"/>
+    <comp lib="1" loc="(510,460)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="1" loc="(510,320)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="3" loc="(380,530)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="3" loc="(380,250)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(280,260)" name="Constant">
       <a name="width" val="5"/>
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(280,330)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="RdM"/>
+    </comp>
+    <comp lib="3" loc="(380,320)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(550,320)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="ForwardAD"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="3" loc="(380,460)" name="Comparator">
+      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(280,540)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="RtD"/>
+    </comp>
+    <comp lib="0" loc="(280,390)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="RegWriteM"/>
     </comp>
     <comp lib="0" loc="(550,460)" name="Pin">
       <a name="facing" val="west"/>
@@ -354,41 +378,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="RsD"/>
-    </comp>
-    <comp lib="0" loc="(280,390)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="RegWriteM"/>
-    </comp>
-    <comp lib="1" loc="(510,460)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="3" loc="(380,460)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="3" loc="(380,250)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="3" loc="(380,320)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(280,330)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="RdM"/>
-    </comp>
-    <comp lib="0" loc="(550,320)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="ForwardAD"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(510,320)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="3" loc="(380,530)" name="Comparator">
-      <a name="width" val="5"/>
     </comp>
   </circuit>
 </project>
