@@ -156,25 +156,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(180,340)" to="(200,340)"/>
     <wire from="(160,380)" to="(180,380)"/>
     <wire from="(180,580)" to="(200,580)"/>
-    <comp lib="1" loc="(510,440)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(120,200)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="RegWriteE"/>
     </comp>
-    <comp lib="3" loc="(240,530)" name="Comparator">
-      <a name="width" val="5"/>
+    <comp lib="1" loc="(510,440)" name="OR Gate">
+      <a name="inputs" val="2"/>
     </comp>
-    <comp lib="3" loc="(240,290)" name="Comparator">
+    <comp lib="0" loc="(120,320)" name="Pin">
       <a name="width" val="5"/>
-    </comp>
-    <comp lib="1" loc="(420,320)" name="AND Gate">
-      <a name="inputs" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="WriteRegE"/>
     </comp>
     <comp lib="0" loc="(120,440)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="BranchD"/>
+    </comp>
+    <comp lib="3" loc="(240,590)" name="Comparator">
+      <a name="width" val="5"/>
     </comp>
     <comp lib="1" loc="(420,560)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -184,19 +183,22 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="rtD"/>
     </comp>
+    <comp lib="3" loc="(240,290)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(120,260)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="rsD"/>
-    </comp>
-    <comp lib="3" loc="(240,590)" name="Comparator">
-      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(560,440)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="BranchStall"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(420,320)" name="AND Gate">
+      <a name="inputs" val="3"/>
     </comp>
     <comp lib="0" loc="(120,680)" name="Pin">
       <a name="tristate" val="false"/>
@@ -213,10 +215,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="WriteRegM"/>
     </comp>
-    <comp lib="0" loc="(120,320)" name="Pin">
+    <comp lib="3" loc="(240,530)" name="Comparator">
       <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="WriteRegE"/>
     </comp>
     <comp lib="1" loc="(330,320)" name="OR Gate">
       <a name="inputs" val="2"/>
@@ -234,18 +234,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="117" y="82">RtE</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="118" y="102">RtD</text>
       <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="157" y="72">lwstall</text>
+      <text fill="#808080" font-family="SansSerif" font-size="6" text-anchor="middle" x="141" y="107">RegWriteE</text>
       <circ-port height="8" pin="290,130" width="8" x="106" y="36"/>
       <circ-port height="8" pin="290,200" width="8" x="106" y="56"/>
       <circ-port height="8" pin="290,280" width="8" x="106" y="76"/>
       <circ-port height="8" pin="290,360" width="8" x="106" y="96"/>
       <circ-port height="10" pin="680,180" width="10" x="165" y="65"/>
+      <circ-port height="8" pin="290,160" width="8" x="136" y="106"/>
       <circ-anchor facing="east" height="6" width="6" x="167" y="67"/>
     </appear>
-    <wire from="(550,200)" to="(570,200)"/>
-    <wire from="(530,280)" to="(550,280)"/>
-    <wire from="(550,160)" to="(570,160)"/>
-    <wire from="(420,240)" to="(440,240)"/>
-    <wire from="(420,320)" to="(440,320)"/>
+    <wire from="(520,180)" to="(570,180)"/>
     <wire from="(330,230)" to="(380,230)"/>
     <wire from="(330,250)" to="(380,250)"/>
     <wire from="(330,310)" to="(380,310)"/>
@@ -253,9 +251,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(620,180)" to="(680,180)"/>
     <wire from="(440,300)" to="(440,320)"/>
     <wire from="(440,240)" to="(440,260)"/>
+    <wire from="(520,160)" to="(520,180)"/>
     <wire from="(550,130)" to="(550,160)"/>
     <wire from="(550,200)" to="(550,280)"/>
-    <wire from="(290,130)" to="(550,130)"/>
     <wire from="(330,250)" to="(330,280)"/>
     <wire from="(330,330)" to="(330,360)"/>
     <wire from="(330,200)" to="(330,230)"/>
@@ -265,28 +263,31 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(290,360)" to="(330,360)"/>
     <wire from="(440,300)" to="(480,300)"/>
     <wire from="(440,260)" to="(480,260)"/>
+    <wire from="(290,160)" to="(520,160)"/>
+    <wire from="(550,200)" to="(570,200)"/>
+    <wire from="(530,280)" to="(550,280)"/>
+    <wire from="(550,160)" to="(570,160)"/>
+    <wire from="(420,240)" to="(440,240)"/>
+    <wire from="(420,320)" to="(440,320)"/>
+    <wire from="(290,130)" to="(550,130)"/>
     <comp lib="1" loc="(620,180)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(290,130)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="MemtoRegE"/>
+      <a name="inputs" val="3"/>
     </comp>
     <comp lib="0" loc="(290,280)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="rtE"/>
     </comp>
-    <comp lib="0" loc="(290,360)" name="Pin">
-      <a name="width" val="5"/>
+    <comp lib="0" loc="(290,160)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="rtD"/>
+      <a name="label" val="RegWriteE"/>
+    </comp>
+    <comp lib="0" loc="(290,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="MemtoRegE"/>
     </comp>
     <comp lib="1" loc="(530,280)" name="OR Gate">
       <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="3" loc="(420,320)" name="Comparator">
-      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(680,180)" name="Pin">
       <a name="facing" val="west"/>
@@ -294,13 +295,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="lwstall"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="3" loc="(420,240)" name="Comparator">
-      <a name="width" val="5"/>
-    </comp>
     <comp lib="0" loc="(290,200)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
       <a name="label" val="rsD"/>
+    </comp>
+    <comp lib="0" loc="(290,360)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="rtD"/>
+    </comp>
+    <comp lib="3" loc="(420,320)" name="Comparator">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="3" loc="(420,240)" name="Comparator">
+      <a name="width" val="5"/>
     </comp>
   </circuit>
 </project>
